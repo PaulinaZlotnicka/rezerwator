@@ -1,0 +1,7 @@
+READ ME
+
+SZKIELET APLIKACJI REZERWATOR AUT
+
+- adminstrator dodaje samochody i uzytkowników, akceptuje rezerwacje
+- uzytkownicy moga przejrzec auta, ich dostepnosci i zawnioskować o rezerwacje
+- zaczynamy od widoku str glownej gdzie mamy listę aut wg typów. Stad mozesz przejsc do sprzedzenia dostepnosci wszystkich aut lub do szczegolow per auto gdzie znajdziesz tez opcje sprawdzenia dostepnosci tego konkretnego auta i potem jego rezerwacji

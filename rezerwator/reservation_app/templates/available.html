@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2> {{ text_1 }} </h2>
+<p>
+<form method="post">
+<label for="start">Od:</label> <input type="date" name="start">
+<label for="end">Do:</label> <input type="date" name="end">
+<input type="submit" value="Wyszukaj" name="check_available">
+{% csrf_token%}
+</form>
+</p>
+
+{{ text_2 }}
+<ul>
+ {% for car in available_cars %}
+ <li>{{ car.car_model }} <a href='/car_details/{{ car.pk }}'> wiecej info i rezerwacja </a></li>
+ {% endfor %}
+</ul>
+
+{% endblock %}

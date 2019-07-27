@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>SAMOCHÓD: {{ car.car_model }}</h2>
+<p> OPIS: {{ car.description }} </p>
+<p> ILOŚĆ OSÓB: {{ car.sits }} </p>
+<p> SILNIK: {{ car.engine }} </p>
+<p> DEPOZYT: {{ car.deposit }} </p>
+
+{% for price in prices %}
+  <p> Sezon {{ price.get_season_display }} > limit KM: {{ price.km_limit }} >>>> cena za dzień: {{ price.price_per_day }} PLN </p>
+{% endfor %}
+
+<a href='/availability/{{ car.pk }}'> SPRAWDŹ DOSTĘPNOŚĆ </a>
+
+{% endblock %}

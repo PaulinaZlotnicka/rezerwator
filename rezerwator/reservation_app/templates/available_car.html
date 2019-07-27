@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2> {{ text_1 }} {{ car.car_model }} </h2>
+
+<p>
+<form method="post">
+<label for="start">Od:</label> <input type="date" name="start">
+<label for="end">Do:</label> <input type="date" name="end">
+<input type="submit" value="Wyszukaj" name="check_available">
+{% csrf_token%}
+</form>
+</p>
+
+
+<h2> {{ text_2 }} </h2> <a href='/makereservation/{{ car.pk }}'> {{ text_3 }} </a>
+
+
+
+{% endblock %}

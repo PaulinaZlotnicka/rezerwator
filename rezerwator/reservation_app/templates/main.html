@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>CAMPERY <a href='/availability/campers'> SPRAWDŹ DOSTĘPNOŚĆ </a></h2>
+<ul>
+ {% for camper in campers %}
+ <li>{{ camper.car_model }} <a href='/car_details/{{ camper.pk }}'> wiecej info </a></li>
+ {% endfor %}
+</ul>
+
+<h2>DOSTAWCZE <a href='/availability/vans'> SPRAWDŹ DOSTĘPNOŚĆ </a></h2>
+<ul>
+ {% for van in vans %}
+ <li>{{ van.car_model }} <a href='/car_details/{{ van.pk }}'> wiecej info </a></li>
+ {% endfor %}
+</ul>
+
+<h2>OSOBOWE <a href='/availability/passengers'> SPRAWDŹ DOSTĘPNOŚĆ </a></h2>
+<ul>
+ {% for passenger in passengers %}
+ <li>{{ passenger.car_model }} <a href='/car_details/{{ passenger.pk }}'> wiecej info </a></li>
+ {% endfor %}
+</ul>
+
+{% endblock %}

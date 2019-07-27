@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<h2> {{ text_1 }} {{ car.car_model }} </h2>
+
+        <p>
+        <form method="post">
+            WYBIERZ DATĘ: <label for="start">Od:</label> <input type="date" name="start"> <label for="end">Do:</label> <input type="date" name="end">
+            KOMENTARZ: <input type="text" name="comment">
+                <input type="submit" value="REZERWUJ" name="make_reservation"> <br>
+            {% csrf_token%}
+        </form>
+
+<h2> {{ text_2 }} </h2>
+
+{% endblock %}
